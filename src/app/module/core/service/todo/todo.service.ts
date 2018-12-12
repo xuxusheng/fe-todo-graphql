@@ -30,7 +30,12 @@ export class TodoService {
         mutation updateTodo($id: Int!, $title: String!, $description: String) {
           updateTodo(id: $id, title: $title, description: $description)
         }
-      `
+      `,
+      variables: {
+        id,
+        title,
+        description
+      }
     });
   }
 }
